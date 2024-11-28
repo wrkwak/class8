@@ -1,4 +1,4 @@
-package chap00;
+package sec01.exam01;
 
 public class test2 {
 
@@ -6,7 +6,7 @@ public class test2 {
 		// TODO Auto-generated method stub
 		String s = "";				
 
-		for (int i = 0; i <= 3 ; i++) {
+		for (int i = 0; i <= 3 ; i++) { 
 			s += "*";
 			System.out.println(s);
 		}

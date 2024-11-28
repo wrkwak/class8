@@ -13,8 +13,9 @@ public class OpExam {
 //		double b = 7.0;
 //		System.out.println("b : "+ b/3);
 //		
-////		System.out.println("b : "+ b/0);
-//		//int를 0으로 나누면 "/by zero" 에러
+//		System.out.println("b : "+ b/0);
+		//int를 0으로 나누면 "/by zero" 에러
+//		
 //		double c = 7.0;
 //		System.out.println("7/0 = "+c/0);
 //		//Infinity 에러
@@ -98,14 +99,28 @@ public class OpExam {
 //		char grade = (score > 90)?'A':'B';
 //		System.out.println(grade);
 
-		int var1 = 5;
-		int var2 = 2;
-		double var3 = (double)var1/var2;
-		double var4 = var3*var2;
-		System.out.println((int)var4);
+//		int var1 = 5;
+//		int var2 = 2;
+//		double var3 = (double)var1/var2;
+//		double var4 = var3*var2;
+//		System.out.println((int)var4);
+//		
+//		int value = 356;
+//		System.out.println(value-(value%100));
 		
-		int value = 356;
-		System.out.println(value-(value%100));
+		//문제
+		//소수점 3자리까지 함수 사용하지 않고 나타내기
+		double v1 = 1000;
+		double v2 = 457;
+		
+		//풀이
+		//자를 소수점까지 정수를 만들고 그걸 다시 실수로 변환
+		double v3 = (v1/v2)*1000;
+		int v4 = (int)v3;
+		double v5 = (double)v4/1000;
+		
+		System.out.println(v5);
+		System.out.println(v1/v2);
 	}
 
 }
