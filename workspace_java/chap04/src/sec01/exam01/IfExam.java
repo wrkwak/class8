@@ -270,17 +270,18 @@ public class IfExam {
 //		System.out.println(inrdm);
 //		
 		// 로또 demo
+		// TODO
 		for (int i = 0; i < 6; i++) {
 
 			int lnum = 0;
-			int nnum = (int) (Math.random() * 50); // 0도 거를 수 있음
+			int nnum = (int) (Math.random() * 50);  
 
-			if (lnum == nnum) {// 이전번호와 뽑은 번호가 같다면
+			if (lnum == nnum || nnum == 0) {// 이전번호와 뽑은 번호가 같거나 0이 나오면
 				lnum = nnum;
 				i--;
+			} else {
+				System.out.print(nnum + " ");				
 			}
-
-			System.out.print(nnum + " ");
 		}
 
 		System.out.println();
@@ -336,5 +337,9 @@ public class IfExam {
 			}
 		}
 
+//		int nnnn = (int) (Math.random() * 60);
+//		System.out.println(nnnn%6+1);
+
 	}
 }
+	
