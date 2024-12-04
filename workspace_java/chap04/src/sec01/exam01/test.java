@@ -8,7 +8,7 @@ public class test {
 		String t = "";		
 
 		for (int i = 0; i <= 3 ; i++) {
-			s += "*";
+			s += "+";
 			t = String.format("%4s", s);
 			System.out.println(t);
 		}
