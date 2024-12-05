@@ -3,15 +3,41 @@ package sec01.exam01;
 public class test2 {
 
 	public static void main(String[] args) {
-		// 6-2 소문자로 임시비밀번호 8자리 만들기
-		char [] pwds2 = new char[8];
-		int rnd = 0;
-		for(int y = 0; y <= pwds2.length-1; y++) {
-			rnd = (int) (Math.random() * 140); 
-			if( 97 <= rnd && rnd <= 122) {
-				pwds2[y] = (char)rnd;
-			}
-			System.out.print(pwds2[y]+" "); 
-		}
-}
+        // 8번 문제 : 중복없는 로또 번호 출력하기 
+        int[] lotto = new int[6];
+
+        int lnum = 0;
+        System.out.print("1차번호 :");
+        for (int i = 0; i <= lotto.length-1; i++) {
+            lnum = ((int) (Math.random() * 45)+1);
+            if(lnum != 0){
+                lotto[i] = lnum;
+            } else{
+                i--;
+            }
+            System.out.print(lotto[i]+" ");
+        }
+        System.out.println();
+        for(int l = 0; l <=lotto.length-1; l++){
+            for(int m = l; m <= lotto.length-2; m++){
+                if(lotto[l]==lotto[m+1]){
+                    System.out.println("중복이 발생했으므로 정제를 시작합니다.");
+                    if(m==lotto.length-2){
+                        lotto[m+1]= ((int) (Math.random() * 45)+1);
+                        if(l!=0) {
+                        	--l;                        	
+                        }
+                        --m;
+                    } else{
+                        lotto[m+1]= ((int) (Math.random() * 45)+1);
+                        --m;
+                    }
+                }
+            }
+        }
+        System.out.print("정제번호 :");
+        for(int o = 0; o <= lotto.length-1; o++){
+            System.out.print(lotto[o]+" ");
+        }
+	}
 }

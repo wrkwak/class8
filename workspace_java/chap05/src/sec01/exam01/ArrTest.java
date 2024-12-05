@@ -37,7 +37,7 @@ public class ArrTest {
                     arr[k] = swp;
                 }
             }
-        } System.out.println("3번 문제 답 : "+arr[arr.length-1]);
+        } System.out.println("3번 문제 답 : "+arr[arr.length-1]);        
 
         //4번 문제 : 두번째 큰 수 구하기
         for(int k=0; k<= arr.length-1; k++) {
@@ -103,14 +103,14 @@ public class ArrTest {
 //        int rnd = 0;
         cnt = 0;
         System.out.print("6-3번 문제 답 : ");
-        do{
-            rnd = (int) (Math.random() * 140); // 랜덤
-            System.out.print(rnd);
+        do{ 
+            rnd = (int) (Math.random() * 10); // 랜덤
+            System.out.print(rnd+1);
             cnt += 1;
-        } while(!(cnt == 1));
+        } while(!(cnt == 2));
         cnt = 0;
         do{
-            rnd = (int) (Math.random() * 140); // 랜덤
+            rnd = ((int) (Math.random() * 90))+1; // 랜덤
             if(65 <=rnd && rnd <= 90){
                 System.out.print((char)rnd);
                 cnt += 1;
@@ -118,7 +118,7 @@ public class ArrTest {
         }while(!(cnt == 3));
         cnt = 0;
         do{
-            rnd = (int) (Math.random() * 140); // 랜덤
+            rnd = ((int) (Math.random() * 122))+1; // 랜덤
             if( 97 <= rnd && rnd <= 122){
                 System.out.print((char)rnd);
                 cnt += 1;
@@ -172,13 +172,13 @@ public class ArrTest {
         } while(!(sys == 4));
 
 
-        // 8번 문제 : 중복없는 로또 번호 출력하기
+        // 8번 문제 : 중복없는 로또 번호 출력하기 
         int[] lotto = new int[6];
 
         int lnum = 0;
         System.out.print("1차번호 :");
         for (int i = 0; i <= lotto.length-1; i++) {
-            lnum = (int) (Math.random() * 50);
+            lnum = ((int) (Math.random() * 45)+1);
             if(lnum != 0){
                 lotto[i] = lnum;
             } else{
@@ -192,12 +192,25 @@ public class ArrTest {
                 if(lotto[l]==lotto[m+1]){
                     System.out.println("중복이 발생했으므로 정제를 시작합니다.");
                     if(m==lotto.length-2){
-                        lotto[m+1]= (int) (Math.random() * 50);
-                        --l;
+                        lotto[m+1]= ((int) (Math.random() * 45)+1);
+//                        System.out.println("1번오류 ");	
+//                        System.out.println("l : "+l);	
+//                        System.out.println("m : "+m);	
+                        if(l!=0) {
+                        	--l;                        	
+                        }
                         --m;
+//                        System.out.println("l : "+l);	
+//                        System.out.println("m : "+m);	
+                        
                     } else{
-                        lotto[m+1]= (int) (Math.random() * 50);
+                        lotto[m+1]= ((int) (Math.random() * 45)+1);
+//                        System.out.println("2번오류");
+//                        System.out.println("l : "+l);	
+//                        System.out.println("m : "+m);	
                         --m;
+//                        System.out.println("l : "+l);	
+//                        System.out.println("m : "+m);	
                     }
                 }
             }
@@ -206,7 +219,6 @@ public class ArrTest {
         for(int o = 0; o <= lotto.length-1; o++){
             System.out.print(lotto[o]+" ");
         }
-
     }
 
 }

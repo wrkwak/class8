@@ -1,5 +1,7 @@
 package sec01.exam01;
 
+import java.util.Arrays;
+
 public class ArrExam {
 
 	public static void main(String[] args) {
@@ -35,21 +37,64 @@ public class ArrExam {
 //			System.out.println("sArr["+k+"] = "+"\"이름"+(k+1)+"\"");
 ////			System.out.prinf(sArr[k] = "이름k";);
 //		}
+//		
+//		int[] arr= new int[10];
+//		int sum = 0;
+//		
+//		for(int j = 0; j<=arr.length-1; j++) {
+//			arr[j]=j+1;
+//			sum += arr[j];
+//		}
+//		System.out.println(sum/arr.length);
+//		System.out.println(sum);
+//		
+//		for(int k = arr.length-1; k >= 0; k--) {
+//			System.out.println(arr[k]);
+//		}
 		
-		int[] arr= new int[10];
-		int sum = 0;
+//		int[][] 천안 = new int[4][20];
+//		System.out.println(천안);
+//		
+//		int[][] test = {
+//				          {1,2,3},
+//				          {1,2,3,4},
+//				          {78},
+//						};
+//		System.out.println(test[2].length);
 		
-		for(int j = 0; j<=arr.length-1; j++) {
-			arr[j]=j+1;
-			sum += arr[j];
-		}
-		System.out.println(sum/arr.length);
-		System.out.println(sum);
+//		System.out.println(test.length);
+//		String d = "1";
+//		System.out.println(d.length);
 		
-		for(int k = arr.length-1; k >= 0; k--) {
-			System.out.println(arr[k]);
-		}
+//		int[][] sw = new int [4][20];
+//		int[][] su = new int [4][20];
+//		
+//		int[][][] hm = new int [3][4][20];
+//		System.out.println(hm.length);
 		
+//		다차원 배열
+//		int[][] clndr = new int[12][31];
+//		
+//		for(int i =1; i <clndr.length; i++) {
+//			System.out.print(i+"월 ");
+//			for(int j = 1; j<= 30; j++) {
+//				clndr[i][j] = j+1;
+//				System.out.print(clndr[i][j]+"일 ");
+//			}
+//			System.out.println();
+//		}
+		// 배열을 깊은 복사
+		String[] name1 = {"a","b","c","d"};
+//		String[] name2 = name1;
+//		System.out.println(name2[0]);
+//		System.out.println(name2[1]);
+//		System.out.println(name2[2]);
+//		System.out.println(name2[3]);
+		
+		//System.arraycopy()
+//		Arrays.copyOf(null, 0);
+		
+//		System.arraycopy(name1, 0, name3, 0, name1.length);
 	}
 
 }

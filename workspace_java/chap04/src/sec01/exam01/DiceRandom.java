@@ -13,7 +13,7 @@ public class DiceRandom {
 			sum = num1 + num2;
 //			System.out.println(num1);
 //			System.out.println(num2);
-		} while (sum == 5);
+		} while (!(sum == 5));
 			System.out.println(num1 + "," + num2);
 	}
 
