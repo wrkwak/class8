@@ -179,11 +179,6 @@ public class ArrTest {
         System.out.print("1차번호 :");
         for (int i = 0; i <= lotto.length-1; i++) {
             lnum = ((int) (Math.random() * 45)+1);
-            if(lnum != 0){
-                lotto[i] = lnum;
-            } else{
-                i--;
-            }
             System.out.print(lotto[i]+" ");
         }
         System.out.println();
@@ -197,9 +192,9 @@ public class ArrTest {
 //                        System.out.println("l : "+l);	
 //                        System.out.println("m : "+m);	
                         if(l!=0) {
-                        	--l;                        	
+                        	l--;                        	
                         }
-                        --m;
+                        m--;
 //                        System.out.println("l : "+l);	
 //                        System.out.println("m : "+m);	
                         
