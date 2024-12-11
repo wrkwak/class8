@@ -59,10 +59,6 @@ public class Kimbob {
 	      this.price.add(4000);
 	   }
 	   
-	   Kimbob(int seedMoney){//시드머니 변경
-	      this.seedMoney = seedMoney;
-	      System.out.println("권리금이"+seedMoney+"원 으로 변경되었습니다.");
-	   }
 	   
 	   void store() {//매출값 누적
 	      toSales += tot;
@@ -149,6 +145,7 @@ public class Kimbob {
 			   System.out.println("총 금액 :"+tot+"원");
 		   } else {
 			   System.out.println("장바구니가 비었습니다.");
+			   System.out.println();
 		   }
 		   arrcnt = 0;
 	   }
@@ -197,4 +194,8 @@ public class Kimbob {
 //	      System.out.println(":-:-:-:-:-:-:-:-:-:-:-:-:-:");
 //	   }
 
+//	   Kimbob(int seedMoney){//시드머니 변경
+//	      this.seedMoney = seedMoney;
+//	      System.out.println("권리금이"+seedMoney+"원 으로 변경되었습니다.");
+//	   }
 }
