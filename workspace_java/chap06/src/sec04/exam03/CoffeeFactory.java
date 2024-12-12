@@ -187,7 +187,7 @@ public class CoffeeFactory {
 		System.out.println(); 
 	}
 	void prodchekin() {// 생산 시작
-		 System.out.println("상품 생산 시작합니다.");
+		 System.out.println("상품 생산 시작합니다."); 
 		 System.out.println("총 "+totcc+"개 생산완료 되었습니다.");
 		 prodidx.clear();
 		 prodnm.clear();
