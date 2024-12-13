@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>테이블 설명</caption><!--시맨틱 웹을 위한 태그-->
+        <summary>컬럼의 종류(제목1, 제목2, 제목3)</summary><!--시각장애인들을 위한 설명-->
+        <thead>
+            <tr>
+                <th>제목1</th><!--th만 가운데 정렬+ 굵게표시-->
+                <th>제목2</th>
+                <th>제목3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td><!--td는 왼쪽정렬-->
+                <td>제목보다 길게 써보자</td>
+                <td>
+                    <table border = "1">
+                        <tr>
+                            <td>
+                                안쪽 td
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                안쪽 두번째 td
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th colspan="2">제목2</th> <!--셀 합치기 가로로(칼럼)-->
+                <!-- <th>제목3</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">내용1-1</th><!--셀 합치기 세로로(로우)-->
+                <th>내용1-2</th>
+                <th>내용1-3</th>
+            </tr>
+            <tr>
+                <!-- <th>내용2-1</th> -->
+                <th>내용2-2</th>
+                <th>내용2-3</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<hr>
+
