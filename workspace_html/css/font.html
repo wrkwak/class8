@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'TTBookendBatangR'; /*해당 폰트명(변수명같은..)*/
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        #p1{
+            color: aquamarine;
+            font-size: 20px;
+            /* text-decoration: underline; */
+            text-decoration: line-through;
+            font-family: TTBookendBatangR;
+        }
+        /* #p1>div{
+            text-decoration: underline;
+        } */
+        input[type=checkbox]:checked + span{
+            text-decoration: line-through;
+            color: grey;
+            font-family: TTBookendBatangR;
+        }
+        input[type=checkbox] + span{
+            font-family: TTBookendBatangR;
+        }
+        ::selection{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">
+        글씨
+        <div>
+            자식 div
+        </div>
+    </p>
+    <div>
+        <input type="checkbox"><span>복습</span><br>
+        <input type="checkbox"><span>예습</span>
+    </div>
+</body>
+</html>

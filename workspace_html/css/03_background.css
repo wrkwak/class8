@@ -1,0 +1,33 @@
+#bi{
+    height: 400px;
+    background-image: url("https://images-ext-1.discordapp.net/external/4i_37HA53MksW8Rb7aOoBQF8NpCSzrnZg56wncFT9V0/https/i.pinimg.com/736x/f9/8c/ca/f98ccac1f177805e42aa5d43a5215e0f.jpg?format=webp&width=508&height=589");
+    background-repeat: no-repeat;
+    border: 1px solid rebeccapurple;
+    /* 가로세로 */
+    /* background-size: 50px 80px; */
+    /* background-size: 100% 100%;  */
+    /* background-size: cover; */
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(0, 255, 255, 0.21);
+    /* background-position-y: 14em; */
+}
+#di{
+    /* background-color: rgba(255, 187, 0, 0.21); */
+    background-attachment: fixed;
+    height: 100vh;
+    background-image: url("https://images-ext-1.discordapp.net/external/4i_37HA53MksW8Rb7aOoBQF8NpCSzrnZg56wncFT9V0/https/i.pinimg.com/736x/f9/8c/ca/f98ccac1f177805e42aa5d43a5215e0f.jpg?format=webp&width=508&height=589");
+    background-size: cover;
+    overflow: auto;
+}
+#di p{
+    height: 100vh;
+    margin-top: 100px;
+
+}
+/* 
+    background : color || image || repeat || attachment || position
+*/
+body{
+    background: rgba(255, 0, 0, 0.1) url("https://images-ext-1.discordapp.net/external/4i_37HA53MksW8Rb7aOoBQF8NpCSzrnZg56wncFT9V0/https/i.pinimg.com/736x/f9/8c/ca/f98ccac1f177805e42aa5d43a5215e0f.jpg?format=webp&width=508&height=589") no-repeat center;
+}
