@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'TTBookendBatangR'; /*해당 폰트명(변수명같은..)*/
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* body{
+    font-size: 50px;
+} */
+#p1{
+    color: aquamarine;
+    font-size: 20px;
+    /* text-decoration: underline; */
+    text-decoration: line-through;
+    font-family: TTBookendBatangR;
+}
+/* #p1>div{
+    text-decoration: underline;
+} */
+input[type=checkbox]:checked + span{
+    text-decoration: line-through;
+    color: grey;
+    font-family: TTBookendBatangR;
+}
+input[type=checkbox] + span{
+    font-family: TTBookendBatangR;
+}
+::selection{
+    color: aquamarine;
+}
+/* 100~900을 넘어서면 기본 두께 */
+.fw-100{
+    font-weight: 100;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-900{
+    font-weight: 900;
+}
+.fw-2000{
+    font-weight: 2000;
+}
+.fw-bold{
+    font-weight: bold;
+}
+.align-right{
+    text-align: right;
+}
+.align-center{
+    text-align: center;
+}
+.align-justify{
+    text-align: justify;
+}
+.s{
+    letter-spacing: -0.1;
+}
+/* 세로정렬에 많이씀 */
+.lh{
+    line-height: 200%;
+}
+.middle{
+    border: 1px solid red;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.nowrap{
+    border: 1px solid red;
+    width: 50vh;
+    /* flex-wrap: nowrap; */
+    white-space: nowrap;
+    overflow: hidden;
+    /* 말줄임... */
+    text-overflow: ellipsis;
+}
+.text{
+    border: 1px solid red;
+    width: 50vh;
+}
+.word-wrap{
+    word-wrap: break-word;
+}
+.word-break{
+    word-break: break-all;
+}

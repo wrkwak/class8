@@ -1,38 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @font-face {
-            font-family: 'TTBookendBatangR'; /*해당 폰트명(변수명같은..)*/
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-        }
-        #p1{
-            color: aquamarine;
-            font-size: 20px;
-            /* text-decoration: underline; */
-            text-decoration: line-through;
-            font-family: TTBookendBatangR;
-        }
-        /* #p1>div{
-            text-decoration: underline;
-        } */
-        input[type=checkbox]:checked + span{
-            text-decoration: line-through;
-            color: grey;
-            font-family: TTBookendBatangR;
-        }
-        input[type=checkbox] + span{
-            font-family: TTBookendBatangR;
-        }
-        ::selection{
-            color: aquamarine;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/font.css">
 </head>
 <body>
     <p id="p1">
@@ -45,5 +17,40 @@
         <input type="checkbox"><span>복습</span><br>
         <input type="checkbox"><span>예습</span>
     </div>
+    <div class="fw-100">100</div>
+    <div class="fw-500">500</div>
+    <div class="fw-bold">500</div>
+    <div class="fw-900">900</div>
+    <div class="fw-2000">2000</div>
+    <div class="align-right">align-right</div>
+    <div class="align-center">align-center</div>
+    <div class="alighn-justify" style="border : 1px solid red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam quos repellat ducimus blanditiis facere. Corporis aperiam animi, nihil alias quod adipisci officia, quisquam fugiat totam eligendi quos eaque nostrum!</div>
+    <!-- 공간때문에 적용 안됨 -->
+     <div class="align-center" style="border : 1px solid red">
+        <a href="qwer" class="align-right" style="border : 1px solid red">a태그</a>
+     </div>
+     <div class="s">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita qui magnam illum ut veritatis, optio explicabo dolor numquam aperiam! Repellat, fuga nesciunt voluptatem dolorum nemo quasi rem ut praesentium enim?
+     </div>
+     <!-- 세로정렬때 많이 씀 -->
+     <div class="lh">
+        첫번째 줄<br>
+        두번째 줄
+     </div>
+     <div class="middle">
+        세로방향 중앙
+     </div>
+     <div class="nowrap" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas qui cum reiciendis expedita minus exercitationem quos, incidunt eveniet ut impedit fuga illum! Distinctio dolor autem saepe beatae earum! Tempora.">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas qui cum reiciendis expedita minus exercitationem quos, incidunt eveniet ut impedit fuga illum! Distinctio dolor autem saepe beatae earum! Tempora.
+     </div>
+     <div class="text word-wrap">
+        4;12lk34j12kl;3j41;lk23j412l;k3;12l3kjl1;212-304981203948120934801293fasjkdfhaskjldfhasdklfjadshdfasjdlkk3j4 ;l123j4l1;32j4l12;kj9d8f7asd9f7a0sk124k12jx9c7v9c7k24j12kl3j4;zxc90c9x
+     </div>
+     <div class="text word-break">
+        4;12lk34j12kl;3j41;lk23j412l;k3;12l3kjl1;212-304981203948120934801293fasjkdfhaskjldfhasdklfjadshdfasjdlkk3j4 ;l123j4l1;32j4l12;kj9d8f7asd9f7a0sk124k12jx9c7v9c7k24j12kl3j4;zxc90c9x
+     </div>
+     <div class="text word-break">
+        4;12lk34j12kl;3j41;lk23j412l;k3;12l3kjl1;212-304981203948120934801293fasjkdfhaskjldfhasdklfjadshdfasjdlkk3j4 ;l123j4l1;32j4l12;kj9d8f7asd9f7a0sk124k12jx9c7v9c7k24j12kl3j4;zxc90c9x
+     </div>
 </body>
 </html>

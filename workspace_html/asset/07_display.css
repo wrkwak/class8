@@ -1,0 +1,39 @@
+.block{
+    border: 1px solid red;
+    width: 100px;
+    height: 50px;
+    /* (위아래) (좌우) */
+    margin: 0 auto;
+    text-align: center;
+}
+.inline{
+    border: 1px solid red;
+    width: 100px;
+    height: 50px;
+    /* 좌우만 마진 가능 */
+    margin: 50px;
+    /* 좌우만 마진 가능 , border는 밀림*/
+    padding: 30px;
+}
+.bg_blue{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}
+.parent{
+    border: 1px dotted brown;
+    width: 400px;
+    height: 300px;
+}
+.parent > div{
+    border: 1px solid beige;
+    height: 70px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    /* 기본값이 문자의 베이스라인이라서 border의 top으로 맞춰줌(top, bottom, middle)*/
+    vertical-align: top;
+    background-color: hsl(0, 0%, 50%, 75%);
+    font-weight: bold;
+    color: white;
+}
