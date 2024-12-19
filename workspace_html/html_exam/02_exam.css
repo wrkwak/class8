@@ -1,37 +1,68 @@
 .msg{
-    height: 100%;
+    /* border: 1px solid red; */
+    width: 700px;
+    
 }
-.img_block{
+#list{
+    /* border: 1px solid red; */
+    height: 550px;
+    background-color: rgb(251, 219, 225);
+    
+}
+.msg > div{
+    /* border: 0.5px dotted pink; */
+    width: 500;
+    padding: 0;
+    margin: 0;
     display: inline-block;
     vertical-align: top;
 }
 img{
-    width: 40%;
-    height: 55%;
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 550px;
     display: inline-block;
-    vertical-align: top;
-    ;
+    border: 0.5px dotted pink;
+    padding: 0;
 }
 a{
-    width: 10%;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
     border: 2px dotted pink;
-    background-color: pink;
+    background-color: rgb(246, 205, 212);
     color: white;
     display: inline-block;
     vertical-align: top;
-    padding: 0.5%;
     text-align: center;
-    margin-top: 0.5%;
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
-
 }
 a:hover{
     background-color: bisque;
 }
-ul{
-    /* background-color: pink; */
+button{
     margin: 0;
     padding: 0;
+    border: rgb(246, 205, 212);
 }
+/* #p1{
+    position: relative;
+    top:0;
+    left: 0;
+}
+#p2{
+    position: absolute;
+    top:0;
+    left: 0;
+} */
+/* #p1:hover{
+    transform: translateX(30px);
+    transition: all 0.8s ease;
+}  */
+/*
+#p2:active{
+    transform: translateX(-30px);
+    transition: all 0.8s ease;
+}  */
