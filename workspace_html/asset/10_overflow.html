@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid goldenrod;
+        }
+        .p.hidden{
+            overflow: scroll;
+            /* overflow: hidden; */
+            /* overflow: auto; */
+        }
+        .nowrap{
+            width: 300px;
+            border: 1px solid red;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+        .nowrap div{
+            width: 100px;
+            border: 1px solid green;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="p hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eaque vitae soluta dolore odio. Quo eius incidunt saepe, molestias soluta tenetur sit officiis officia? Vitae odio tempore quas ad commodi?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eaque vitae soluta dolore odio. Quo eius incidunt saepe, molestias soluta tenetur sit officiis officia? Vitae odio tempore quas ad commodi?
+    </div> -->
+
+    <div class="nowrap">
+        <div>항목1</div>
+        <div>항목2</div>
+        <div>항목3</div>
+        <div>항목4</div>
+        <div>항목5</div>
+    </div>
+</body>
+</html>

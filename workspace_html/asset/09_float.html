@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .article{
+            border: 1px solid rebeccapurple;
+        } */
+        .box{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        .box.left{
+            float: left;
+            border: 1px solid red;
+        }
+        /* html 출력순서 대로 right에 배치됨, 3번이 제일 오른쪽에 있음
+        -> 배치 결과 12 43 */
+        .box.right{
+            float: right;
+            border: 1px solid blue;
+        }
+        .clearfix::after{
+            border: 1px solid hotpink;
+            content: "";
+            display: block;
+            clear:both;
+        }
+        .homepage{
+            margin: 10px;
+            border: 1px solid red;
+            text-align: center;
+        }
+        .homepage .menu{
+            border: 1px solid blue;
+            width: 200px;
+            float: left;
+            text-align: left;
+        }
+        .homepage .mypage{
+            border: 1px solid blue;
+            width: 200px;
+            float: right;
+            text-align: right;
+        }
+        .homepage .logo{
+            border: 1px solid hotpink;
+            display: inline-block;
+            text-align: center;
+        }
+
+    </style>
+    
+
+</head>
+<body>
+    <!-- <div class="article">
+        <img class="box left" src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/80f9d9d02af9527ab358c361/pexels-photo-3335367.jpeg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ab assumenda temporibus distinctio consequuntur cum similique quaerat consequatur perspiciatis iure quisquam praesentium enim quis, maxime fuga debitis nostrum perferendis corporis.
+    </div> -->
+
+    <div class="clearfix">
+        <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem possimus esse ipsa ducimus saepe omnis, eaque, minima aliquam eum in id ratione tempore nisi cumque, fugiat mollitia! Deserunt, doloremque quae. -->
+        <div class="box left">1</div>
+        <div class="box left">2</div>
+        <div class="box right">3</div>
+        <div class="box right">4</div>
+    </div>
+
+    <div>
+        <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem possimus esse ipsa ducimus saepe omnis, eaque, minima aliquam eum in id ratione tempore nisi cumque, fugiat mollitia! Deserunt, doloremque quae. -->
+        <div class="box left">1</div>
+        <div class="box left">2</div>
+        <div class="box right">3</div>
+        <div class="box right">4</div>
+        <!-- 보편적 사용법 -->
+        <div style="clear: both"></div>
+    </div>
+
+    <!-- clear 사용으로 float 영향을 받지 않게 만듦 -->
+    <div>글씨 몇 개</div>
+
+    <div class="homepage">
+        <div class="menu">왼쪽메뉴</div>
+        <div class="logo">가운데 로고</div>
+        <div class="mypage">오른쪽메뉴</div>
+    </div>
+
+</body>
+</html>
