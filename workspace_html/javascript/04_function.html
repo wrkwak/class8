@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function 키워드로 선언
+        // function 함수명(변수명)
+        // 매개변수 타입 명시 필요 없음
+
+        // 함수를 쓰는 이유
+        // 정해진 순으로 동작하는 코드의 묶음
+        // 재사용 편리
+
+        // function plus(x, y){
+        //     console.log("x : ", x)
+        //     console.log("y : ", y)
+        //     let z = x + y; // 지역 변수
+        //     return z;
+        // }
+        // let a =  plus(1, 2);
+        // console.log(a)
+        
+        // (
+        // function plus(x, y){
+        //     let z = x + y; // 지역 변수
+        //     return z;
+        // }
+        // )();// 함수 선언과 동시에 실행 
+
+        // plus(2,3)
+        
+        // 이런식으로 검사할 수 있음
+        // 따로 검사하는 기능이 없기때문
+        // function plus2(x, y){
+        //     if(x == undefined){
+        //         x=0;
+        //     }
+        // }
+        // plus2();
+
+        // function plus3(x=5, y=6){
+        //     return x+y;
+        // }
+        // console.log(plus3(1,2))
+        // console.log(plus3())
+
+        // spread 연산자
+        // 가변적인 전달인자를 받을 수 있음
+        //배열처럼 사용
+        // function log(...obj){
+        //     console.log(typeof obj)
+        // }
+        // log(1,2,3)
+
+        // let d = [100, 200];
+        // console.log(d) // 그냥 배열처럼 출력
+        // console.log(...d) // 각각 출력함
+        
+        // console.log( plus3(...d) ) // 대박이군..
+
+
+        // eval
+        // 문자열로 저장되어있는 코드를 실행시켜줌
+        // let f = "console.log(123)"
+        // eval(f)
+
+        // function plus4 (){
+        //     console.log("plus4 실행")
+        // }
+
+        // let p = plus4;
+
+        // // console.log(typeof p)
+        // // p();
+        
+        // function plus5(){
+        //     console.log("plus5실행")
+        // }
+        // console.log(typeof plus5)
+        // plus5 = 3 // 엎어치기 가능..ㅎ 모든 변수가 이런식
+        // console.log(typeof plus5)
+
+        // console.log(plus4)
+
+        // // 익명함수
+        // // 이름이 없는 함수를 변수에 넣을 수 있음
+        // let times = function (a, b){
+        //     return a*b;
+        // }
+
+        // console.log ( times(3,4) )
+
+        // // 기존의 함수도 함수명을 변수 취급하고 있음
+        // console.log(typeof times)
+
+        // // callBack 함수
+        // // 전달인자로 받은 함수.. 
+        // // 해당함수가 언제 실행될지 모를때
+
+        // function pay (n, cb){
+        //     console.log("pay 실행")
+
+        //     let ramen = 2500;
+
+
+        //     if( typeof cb == "function"){ //방어코딩
+        //         let result =  cb(ramen, n)
+        //         console.log ("결과 :", result)
+        //     } else {
+        //         console.log("콜백함수 없음")
+        //     }
+        // }
+        // pay(10, times)
+        // pay(10, function (a, b){
+        //             return a*b;
+        //         }
+        // ) // 이런 형태도 가능함
+        
+        // pay(10) // cb가 없을때
+        // pay(10, 2)
+
+        /*
+                setTimeout : 첫번째 전달인자 : 실행할 함수
+                             두번째 전달인자 : 지연할 시간(1/1000 초)
+        */
+        
+    //     let prints = function(){
+    //         console.log("5초뒤")
+    //     }
+    //     // 두가지 형태로 사용가능
+    //     setTimeout( prints, 5000 )
+
+    //    setTimeout( function(){
+    //         console.log("5초뒤")
+    //     }, 5000 )
+
+    //     let c = 1;
+    //    setTimeout( function(a, b){
+    //         console.log("5초뒤")
+    //         console.log("a :",a)
+    //         console.log("b :",b)
+    //     }, 5000, c, 20 ) // 시간 전달인자 뒤에 function(a, b) 매개 변수 값 입력
+
+    //     //setTimeout 취소하는 방법
+    //     let idx = setTimeout( function(a, b){
+    //         console.log("5초뒤")
+    //         console.log("a :",a)
+    //         console.log("b :",b)
+    //     }, 5000, c, 20 ) 
+    //     console.log(idx)
+
+    //     // 예약 취소
+    //     clearTimeout(idx);
+
+    //     //
+    //     let idx2 = setInterval( function(){
+    //         console.log("setInterval 실행")
+    //     }, 1*1000 )
+
+    //     // setInterval 취소
+    //     clearInterval(idx2)
+
+
+        // setTimeout 구현
+        // let start = new Date().getTime()
+        // let diff = -1;
+        // while(diff < 5 * 1000){
+        //     let now = new Date().getTime();
+        //     diff = now - start
+        //     console.log(diff)
+        // }
+        // console.log("5초뒤")
+        // while이 끝날때 까지 다음 줄이 실행되지 않음(동기)
+        // setTimeout은 실행되고 다음 줄이 바로 실행됨(비동기)
+
+        function customTimeout(cb, delay){
+            let start = new Date().getTime()
+            let diff = -1;
+            while(diff < delay){
+            let now = new Date().getTime();
+            diff = now - start
+            console.log(diff)
+            }
+            cb();
+        }
+        customTimeout(1,1000);
+        
+
+        //arrow function (화살표 함수)
+        let test0 = function(a, b){
+            console.log(a, b);
+            return a;
+        }
+        // 익명함수일 경우 화살표 함수로 변경할 수 있음
+        // function 예약어를 생략할 수 있음
+        let test1 = (a, b) =>{
+            console.log(a, b);
+            return a;
+        }
+        
+        // 전달인자가 하나인 경우
+        // 괄호를 생략할 수 있음
+        let test2 = (a) => {
+            console.log(a, b);
+            return a;
+        }
+        let test3 = a =>{
+            console.log(a, b);
+            return a;
+        }
+        // 전달인자가 없을 경우, 괄호 생략 불가능
+        let test4 = () =>{
+
+        }
+
+        let test5 = (a, b) => {
+            return a+b;
+        }
+        // 실행문 안의 내용이 return 문만 있는 경우
+        // return 키워드와 {}를 생략할 수 있음
+
+        let test5_1 = (a, b) => a+b;
+
+        let test6 = a => a*3;
+        test6(3); //9
+
+        //이런식으로 사용
+        customTimeout( a=> a*3, 1000);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

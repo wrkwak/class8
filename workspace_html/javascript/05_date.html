@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 브라우저가 설치된 pc의 시간
+        let now = new Date();
+        console.log(now);
+        
+        // 연도
+        let yyyy = now.getFullYear();
+        console.log(yyyy);
+        
+        // 월 (+1 필수)
+        let mm = now.getMonth();
+        console.log(mm+1);
+        
+        //일
+        let dd = now.getDate()
+        console.log(dd);
+        
+        //요일
+        let dm = now.getDay()
+        switch (dm){
+           case 0 : console.log("일요일");
+           break;
+           case 1 : console.log("월요일");
+           break;
+           case 2 : console.log("화요일");
+           break;
+           case 3 : console.log("수요일");
+           break;
+           case 4 : console.log("목요일");
+           break;
+           case 5 : console.log("금요일");
+           break;
+           case 6 : console.log("토요일");
+           break;
+        }
+        
+        //시간
+        let hh = now.getHours()
+        console.log(hh);
+        
+        //분
+        let mi = now.getMinutes()
+        console.log(mi);
+        
+        //초
+        let ss = now.getSeconds()
+        console.log(ss);
+
+        let iso =now.toISOString()
+        console.log(iso)
+
+        let isoarr = iso.split("T")
+        console.log(isoarr)
+        console.log(isoarr[1].split(".")[0])
+        console.log(iso.split("T")[1].split(".")[0])
+
+        // 1970년 1월 1일 자정부터 지난 시간(ms)
+        // 엄청 많이 쓰인다
+        let timestamp = now.getTime()
+        console.log(timestamp)
+
+        let before = new Date(1735523300909)
+        console.log(before.getHours())
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

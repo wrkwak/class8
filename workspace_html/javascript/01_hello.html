@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 보통 스타일보다 스크립트를 더 먼저 씀 -->
+    <script>
+        //한줄 주석
+        /*범위
+        주석*/
+        // console.log("hello world")
+        // var a = 10;
+
+        // +를 쓰면 문자로 출력됨
+        // 콘솔에서 색깔 검은색
+        // console.log("a : " +a);
+        
+        // var로 선언 안해도 출력은 된다
+        // b = 11;
+
+        // ,는 띄어쓰기를 포함한 +와 같다
+        // 대신 변수의 자료형을 있는 그대로 출력
+        // console.log("b :", b);
+        
+        // let을 쓸 수 있다
+        let c = 12
+        c = "문자"
+        console.log("c :", c);
+        
+        // 에러 출력
+        // const d = 13
+        // console.error(d);
+        
+        //undefined로 출력된다
+        // let e;
+        // console.log(e);
+
+        // 문자로
+        // console.log(""+e);
+        
+        // 에러발생시 자바스크립트 중단
+        // console.log(f); //여기서 에러
+        //여기 출력안됨 
+        // console.log("hello world")
+
+        // 재선언 가능
+        // var a = 20;
+        // b = 21;
+        // console.log(a,b) //에러없이 출력 잘됨
+
+        // let은 재선언 불가
+        // 그래서 let을 써야함
+        // let c = 22; 
+        // const d = 23;
+
+        // 값 재정의는 가능
+        // c = 22;
+        // console.log(c)
+
+        // 이미 위에 const로 선언되었기 때문에 재선언 불가
+        // const는 빠르고 메모리를 적게 차지함
+        // d = 23;
+
+        // var를 사용하지 않으면 전역변수가 됨 (호이스팅 발생)
+        // var aa = 0
+        // aa = 0
+
+        // 실무에서는 const를 많이 씀
+        // const >> let > var
+
+        // 쌍, 홑 따옴표 다 통용 연걸로 닫으면 상관ㄴㄴ
+        // 쌍따옴표 문자인식 자바와 동일
+        // c = "문\"자";
+        // 개행문자도 동일하게 사용
+        // c = "문\n자";
+        // c = '문자';
+        // console.log(c);
+        
+        // typescript 예시
+        // let g:number = 1
+        
+        // 타입확인
+        // console.log(typeof c);
+        // console.log(typeof d);
+        
+        //타입비교
+        // c="13"
+
+        // console.log(c==d); // 값 비교
+        // console.log(c===d); // 타입, 값 비교
+
+        // console.log(c!=d); // 값 비교
+        // console.log(c!==d); // 타입, 값 비교
+
+        // c += 1;
+        // console.log(c);
+
+        // let a1
+        //   , a2
+        //   , a3;
+        // // null 대신 undefined가 있음
+        // if(a === undefined){
+        //     console.log("a1의 값을 넣으세요" , typeof a1)
+        // }
+        // if(a === undefined){
+        //     console.log("a1의 값을 넣으세요")
+
+        // }
+        
+        // const g = "12.34";
+        // console.log(1, g+5);
+        // console.log(2, Number(g)+5);
+        // console.log(3, parseInt(g)+5);
+        
+        // const h = "문자";
+        // console.log(h*5); // NaN : Not a Number
+        // console.log(isNaN(h)); // NaN 확인
+
+
+        // 자바스크립트는 일꾼이 한명
+        // console.log(5/0); // Infinity
+        // console.log(isFinite(5/0));
+
+        // alert("aaaaa");
+        // alert("aa\naaa");
+
+        // const result1 =  confirm("리얼?");
+        // console.log(result1)
+        
+        // result2 = "흠.."
+        // const result2 = prompt("메세지\n개행"); // 취소시 null
+        // console.log(result2)
+
+
+        // console.log("입력한 글씨는 " + result2 + "입니다.")
+        // console.log(`입력한 글씨는 ${result2} 입니다`)
+
+        
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

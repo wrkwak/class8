@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const tem = prompt("온도를 입력하세요"); // 모두 String 값
+        // var u = "영상"
+        // var d = "영하"
+        // if(tem >= 1) {// 알아서 number로 계산해줌
+        //     console.log("현재 온도는 "+ u +"입니다")
+        // } else {
+        //     console.log("현재 온도는 "+ d +"입니다")
+        // }
+        // if(temp > 1 && temp > 2 && temp >3) {
+
+        // }
+
+        // // 삼항도 통함
+        // let a = temp > 0 ? "영상":"영하"
+
+        // 구구단
+        // for(i=2; i<=9; i++){
+        //     for(j=1; j<=9; j++){
+        //         console.log(i+"*"+j+"="+(i*j))
+        //     }
+        //     console.log("----------------")
+        // }
+
+        /*
+        js에서
+        참(true) : 거짓이 아닌것
+        거짓 : false, 0, null, undefined -> 정해져 있음
+        참 : !거짓
+        */
+
+        let arr3 = [10, 20, 30, 40, 50];
+        // foreach는 리턴값이 없음
+        // arr3.forEach( function(a,b,c,d){
+        //     console.log("a:",a) // 배열 요소
+        //     console.log("b:",b) // index
+        //     console.log("c:",c) // 원본 배열
+        //     console.log("d:",d)
+        // } )
+        // arr3.forEach( function(e,index,arr){
+        //     console.log("e:",e) // 해당 순번 값
+        //     console.log("index:",index) // 해당 index
+        //     console.log("arr:",arr) // 원본 배열
+        // } )
+        
+        // map도 동일하게 동작함
+        // map은 리턴값이 있음
+        arr3.map(function(e,index,arr){
+            console.log("e:",e) // 해당 순번 값
+            console.log("index:",index) // 해당 index
+            console.log("arr:",arr) // 원본 배열
+        })
+        console.log("----------------")
+
+        // 리턴 true인 것만 배열로 돌려줌
+        let arr30 = arr3.filter(function(e,index,arr){
+            let result = false;
+            if(e >= 30){
+                result = true;
+            } else {
+                result = false;
+            }
+            return result;
+        })
+
+        console.log(arr30)
+
+        let movies = [
+            '하얼빈','보고타','시빌워','무파사'
+        ]
+        let len = movies.map(el => el.length )
+        console.log(len)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
