@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <h1 id="title">dom연습</h1>
@@ -15,9 +20,11 @@
     <div class="div2">두번째 .div</div>
     
     <div id="parent">
-        <div class="child div2">안쪽 div</div>
+        <div class="child div2" title = "안쪽" human = "class1">안쪽 div</div>
         <div class="child">안쪽 div</div>
     </div>
+
+    <img  style= "width:100px;" title="호리병" data-human="홀홀" src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/eafde1a79bad5760a1191e33/pexels-photo-4048717.jpeg">
 
     <script>
         // document는 html 문서 전체를 뜻함
@@ -64,6 +71,99 @@
        // css 선택자를 사용할 수 있음
        let qs1 = document.querySelector("#parent .div2")
        console.log(qs1); 
+
+       console.log("---------------------------"); 
+       
+       let qs2 = document.querySelector(".div2")
+       console.log(qs2); 
+       
+       // getElement 처럼 null 출력
+       let qs3 = document.querySelector("#human")
+       console.log(qs3); 
+       
+       let qsa1 = document.querySelectorAll(".div2")
+       console.log(qsa1); 
+       
+       // 빈 배열 출력
+       let qsa2 = document.querySelectorAll(".div2sadf")
+       console.log(qsa2); 
+       
+       let qsa3 = document.querySelectorAll("#view")
+       console.log(qsa3); 
+       
+       let child1 = document.querySelector("#parent .div2")
+       console.log(child1); 
+       
+       // child1의 부모 노드 방문법
+       let parent1 = child1.parentNode
+       console.log(parent1); 
+       // 클래스를 배열 형식으로 돌려줌
+       console.log(child1.classList); 
+       // 클래스를 동적으로 추가
+       // 중복추가 불가
+    //    child1.classList.add("red")
+       
+    //    child1.classList.remove("red")
+       
+       // 토글 기능
+    //    child1.classList.toggle("red")
+       
+       // 클래스 존재 유무 확인
+       let isred = child1.classList.contains("red")
+       console.log(isred); 
+       
+       // 토글 구현
+       function tgl() {
+           if (isred == true){
+               child1.classList.remove("red")
+            } else if(isred == false){
+                child1.classList.add("red")    
+           }
+       };
+       tgl();
+
+       // 모든 클래스를 문자로 돌려줌
+       // 클래스명 전체 변경시 많이 사용함
+       console.log(child1.className)
+       child1.className = "blue"
+       console.log(child1.className)
+
+       // css 선택자 중 속성 선택자로 쿼리셀렉터 사용해보기
+       document.querySelector("[id=title]")
+       // contains 구현해보기
+       function ctns(el, name){
+        for (let i=0; i < el.classList.length; i++){
+            if(el.classList[i] == name){
+                return true;
+            }
+        }
+        return false;
+       }
+       console.log(ctns(child1,'red'));
+
+       // 배열
+       let img =  document.getElementsByTagName("img")
+       console.log(img)
+       console.log(img[0].classList)
+       
+       // 속성 존재유무 확인
+       let isSrc = img[0].hasAttribute("src")
+       console.log(isSrc)
+       
+
+       // 값 긁어오기
+       let src = img[0].getAttribute("src")
+       console.log(src)
+       // 없으면 null
+       let src1 = img[0].getAttribute("src1")
+       console.log(src1)
+
+       //setAttribute 
+       // 속성이 존재하지 않는 경우 추가, 있는 경우 덮어씀
+       img[0].setAttribute("data-hu","1class");
+
+       img[0].removeAttribute("data-hu")
+
 
        </script>
 </body>

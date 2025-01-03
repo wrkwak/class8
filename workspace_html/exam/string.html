@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="view" style="height: 1000px;"> 
+        
+    </div>
+
+    <script>
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+        // 1. 마스킹하기
+        let adr = 'todair@naver.com'
+        let adrsplt = adr.split('@')
+        let id = adrsplt[0]
+        let adrl = id.substring(2)
+        let adrf = id.substring(0,2)
+        let adrr = ''
+
+        for(let i=0; i<adrl.length; i++){
+           adrr += '*'
+        //    console.log(adrr)
+        }
+        document.querySelector('#view').innerHTML = '1. 마스킹하기'
+        document.querySelector('#view').innerHTML += '<br>'+ adrf+adrr+'@'+adrsplt[1]
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        
+        // 2-1. naver만 추출(split)
+        let adr2 = 'cafe.naver.com'
+        let adrsplt2 = adr2.split('.')[1]
+        
+        document.querySelector('#view').innerHTML +='<br><br>2. 추출(split 사용)'
+        document.querySelector('#view').innerHTML +='<br>'+adrsplt2
+        
+        // 2-2. naver만 추출(indexOf)
+        document.querySelector('#view').innerHTML +='<br><br>3. 추출(indexOf 사용)'
+        idx = adr2.indexOf(".") // 첫번째 점 찾기
+        str = adr2.substring(idx+1)
+
+        idx2 = str.indexOf(".") // 두번째 점 찾기
+        console.log(str.substring(0,idx2)) 
+        
+        document.querySelector('#view').innerHTML +='<br>'+str.substring(0,idx2)
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        
+        </script>
+</body>
+</html>

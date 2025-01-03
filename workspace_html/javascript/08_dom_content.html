@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="h1"> style test </h1>
+    id : <input type="text" id="id" value="미리적은글"><br>
+    date : <input type="date" id="date"><br>
+    radio : 
+        <input type="radio" name="ai" value="1">gpt
+        <input type="radio" name="ai" value="2">gemini
+        <input type="radio" name="ai" value="3">bing
+        <br>
+
+
+    <select id="select">
+        <option value="1"> 첫번째</option>
+        <option value="2"> 두번째</option>
+    </select>
+    <br>
+
+    <textarea id = "textarea" cols="50" rows="10"></textarea>
+
+
+    <script>
+        setTimeout(
+            function(){
+                const text = document.querySelector("#id")
+                console.log (text.value);
+                
+                const date = document.querySelector("#date")
+                console.log (date.value);
+                
+                const ai =  document.querySelector("[name=ai]:checked")
+                console.log (ai.value); // 밸류 값 출력(항목명이 나오지 않음)
+               } , 4 * 1000
+            ); 
+
+    </script>
+    
+</body>
+</html>

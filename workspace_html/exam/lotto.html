@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="view"></div>
+    <script>
+        const lotto  = new Array(6);
+
+        for (let i = 0; i< lotto.length; i++) {
+            lnum = (parseInt((Math.random() * 45))+1);
+			lotto[i] = lnum;
+            console.log(lotto[i]+" ");
+        }
+        for(let l = 0; l <=lotto.length-1; l++){
+            for(let m = l; m <= lotto.length-2; m++){
+                if(lotto[l]==lotto[m+1]){
+                    console.log("중복이 발생했으므로 정제를 시작합니다.");
+                    if(m==lotto.length-2){
+                        lotto[m+1]= (parseInt((Math.random() * 45))+1);
+                        if(l!=0) {
+                           --l;                           
+                        }
+                        --m;
+                    } else{
+                        lotto[m+1]= (parseInt((Math.random() * 45))+1);
+                        --m;
+                    }
+                }
+            }
+        }
+        document.querySelector('#view').textContent = "행운번호 : "
+        lotto.sort(function(x, y) {return x-y})
+        document.querySelector('#view').textContent +=  lotto
+    </script>
+</body>
+</html>

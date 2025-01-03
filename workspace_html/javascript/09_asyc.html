@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn1(){
+            console.log("fn1");
+            fn2();
+        }
+        function fn2(){
+            // console.log("fn2");
+            setTimeout(function(){ // 비동기 함수로 넘어가고 동기함수 먼저 실행
+                                   // 우선순위 : 동기함수 > 비동기함수
+                                   // 순서를 보장해주지 않음 (동기함수)
+                let start = new Date().getTime();
+                for(let i = 0; i < 1000000000; i++){
+                }       
+                let end = new Date().getTime();
+                console.log("fn2");
+                console.log("fn2 : " + (end - start) + "ms");
+            }, 0);
+            
+            fn3();
+            fn3();
+
+            setTimeout(function(){ 
+                console.log("중간에 낀거"); 
+                // console.log("fn2");
+            }, 0);
+
+
+            fn3();
+            fn3();
+        }
+        function fn3(){
+            console.log("fn3");
+        }
+        
+        fn1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

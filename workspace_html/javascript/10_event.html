@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #console{
+            position: sticky;
+            top: 0;
+        }
+    </style>
+    <script>
+        // btn.addEventListener("click", function(){
+            // }); 
+        // 총 3가지 방법이 있음
+
+            //1. 여러줄 사용 가능
+            window.addEventListener("load", init())
+
+            // 2. 여러줄일때 한개만 덮어씀
+            // window.onload = function(){ 
+            //     init();
+            // }
+
+        function init(){
+            // const btn2 = document.querySelector("#btn2");
+            // console.log('btn2 :',btn2);
+            
+            // btn2.onclick = function(){
+            //     document.querySelector("#console").innerHTML += "<br>버튼2 클릭";
+                
+            // }
+            // btn2.onclick = function(){ // onclick은 변수이므로 덮어씌워짐
+            //     document.querySelector("#console").innerHTML += "<br>버튼2-1 클릭";
+                
+            // }
+
+            // addEventListener : 함수를 추가하는 개념, 여러개 추가 가능
+            // 두 개의 이벤트를 동시에 사용하고 싶을 때
+            // const btn3 = document.querySelector("#btn3");
+            // btn3.addEventListener("click", function(){
+            //       document.querySelector("#console").innerHTML += "<br>버튼3 클릭";
+            //       document.documentElement.scrollTop = 1000;
+            // })
+            // btn3.addEventListener("click", function(){
+            //     document.querySelector("#console").innerHTML += "<br>버튼3-1 클릭";
+            // })
+
+            // const btn4 = document.querySelector("#btn4");
+
+            // removeEventListener : 이벤트 제거
+            // 익명함수는 이벤트 제거가 안됨 : 익명함수는 선언될 때마다 vm이라는 공간에 신규 id를 발급 받기 때문
+            // btn4.addEventListener("click", btn4click);
+            // btn4.addEventListener("click", btn4click);
+            // btn4.removeEventListener("click", btn4click);
+
+            // window.addEventListener("scroll", function(){
+            //     const scroltop = document.documentElement.scrollTop;
+            //     document.querySelector("#console").innerHTML = scroltop;
+            // })
+
+
+            document.querySelector("#login")
+                    .addEventListener("click", function(){
+                    const id = document.querySelector("#id").value;
+                    const pw = document.querySelector("#pw").value;
+                    document.querySelector("#console").innerHTML += id
+            })
+        }
+        
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //     function btnclick(){
+    //         console.log("버튼1 클릭");
+
+    //         document.querySelector("#console").innerHTML += "<br>버튼1 클릭";
+    //     }
+
+    //     function btn4click(){
+    //         console.log("버튼1 클릭");
+
+    //         document.querySelector("#console").innerHTML += "<br>버튼4 클릭";
+    //     }
+    // </script>
+</head>
+<!-- 3. -->
+<body style="height: 2000px;" onload="javascript:init()">  <!--javascript: 는 생략 가능 --> 
+    <div id = "console"></div>
+    <!-- <button id="btn1" onclick="javascript:btnclick()">버튼1</button><br>
+    <button id="btn2">버튼2</button><br>
+    <button id="btn3">버튼3</button><br>
+    <button id="btn4">버튼4</button><br> -->
+
+    <div>
+        id : <input type="text" id="id" ><br>
+        pw : <input type="password" id="pw"><br>
+
+        <input type="button" id="#login" value="로그인">
+    </div>
+</body>
+</html>

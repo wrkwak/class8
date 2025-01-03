@@ -11,7 +11,7 @@
         
         // 연도
         let yyyy = now.getFullYear();
-        console.log(yyyy);
+        console.log('yyyy',yyyy);
         
         // 월 (+1 필수)
         let mm = now.getMonth();
@@ -56,14 +56,14 @@
         console.log(iso)
 
         let isoarr = iso.split("T")
-        console.log(isoarr)
-        console.log(isoarr[1].split(".")[0])
-        console.log(iso.split("T")[1].split(".")[0])
+        console.log('first',isoarr)
+        console.log('ss',isoarr[1].split(".")[0])
+        console.log('trd',iso.split("T")[1].split(".")[0])
 
         // 1970년 1월 1일 자정부터 지난 시간(ms)
         // 엄청 많이 쓰인다
         let timestamp = now.getTime()
-        console.log(timestamp)
+        console.log('timestamp',timestamp)
 
         let before = new Date(1735523300909)
         console.log(before.getHours())

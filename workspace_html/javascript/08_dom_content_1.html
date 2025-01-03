@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            color: red;
+            height: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="msg">
+        <span>원래 </span>           글씨
+    </div>
+
+    <div id="test"></div>
+
+    <div>
+        <h1 id="h1"> style 테스트</h1>
+    </div>
+    
+    <script>
+        let msg =  document.querySelector("#msg")
+
+        // textContent : 컨텐츠 영역을 포함한 텍스트 그대로 출력
+        console.log('textContent',msg.textContent)
+        
+        // innerText : 브라우저가 계산을 끝내고 출력되는 화면 그대로 표시
+        console.log('innerText',msg.innerText)
+        
+        // innerHTML : 소스를 출력해줌
+        console.log(msg.innerHTML)
+
+        // textContent, innerText : 값을 넣으면 컨텐츠를 변경해 줌
+        // tag도 글씨로 인식
+        msg.textContent = "<h1>제목</h1>         a           b      c"
+        msg.innerText = "<h1>제목</h1>         a           b      c"
+        
+        // innerHTML : html이 삽입됨
+        msg.innerHTML = "<h1>제목(aaaa)</h1>         a           b      c"
+        msg.innerHTML += "<h2>제목2</h2>"
+
+        // <div id = 'menu' style = 'color : red;'>
+            // 메뉴
+        // </ div>
+
+        let div = document.createElement("div");
+        div.setAttribute("id","menu")
+        div.setAttribute("style","color:red;")
+        div.textContent = '메뉴';
+        div.classList.add("primary")
+
+        // appendChild : 마지막 자식요소로 들어감. dom만 넣을 수 있음
+        // msg.appendChild(div);
+        
+        // append : 마지막 자식요소로 들어감. dom, text 둘 다 가능
+        msg.append(div);
+        msg.append("그냥 글씨")
+        msg.append("<strong>그냥 글씨</strong>")
+
+        // prepend : 첫번째 자식요소로 들어감.
+        msg.prepend(div)
+
+        // 형제요소 중 동생으로 들어감
+        msg.after(div)
+
+        // 형제요소 중 형으로 들어감
+        msg.before(div)
+
+        let html = `
+                  <div>
+                     dkdkdk
+                  </div>`;
+        
+       document.querySelector("#test").innerHTML = html;
+
+       // html 텍스트를 html 요소로 만들어줌
+       // <html><head><body>도 같이 만들어서 body 안에 넣어줌
+       let dom = new DOMParser().parseFromString(html, "text/html")
+       console.log(dom)
+       console.log(dom.documentElement)
+       // 어펜드를 이렇게
+       let div2 =  dom.documentElement.querySelector("body > div")
+       div.append(div2)
+       
+       let h1 = document.querySelector("#h1")
+       
+       h1.style.color = "blue";
+       console.log(h1.style.color)
+       
+       //css에서 -로 연결된 프로퍼티는 카멜케이스로 변경하면 사용가능
+       // 예시 background-color => backgroundColor
+       h1.style.backgroundColor = "green"
+       
+       // 스타일 덮어씀
+       h1.style.cssText = "font-size : 20px; border : 1px solid red;"
+    
+       // 처음 설정된 css 값을 출력
+       window.getComputedStyle(h1, null).getPropertyValue("height");
+       console.log(window.getComputedStyle(h1, null).getPropertyValue("height")
+    )
+
+
+    </script>
+</body>
+</html>

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <style>
+        /********************************************/
+        /********************************************/
+        /********************************************/
         body{
-            min-width: 440px;
-            max-width: 1263px;
+            min-width: 450px;
             max-height: 1000px;
             margin: 0;
         }
-        /* .s1, .s2, .s3{ 
-            height: 800px;
-        } */
         .s1{
             display: block;
             background-image: url("https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/9b22e6f1444b5ae785f3a267/pexelsphoto3326103.jpeg");
@@ -21,6 +21,39 @@
             background-repeat: no-repeat;
             background-size: cover;
             z-index: -99;
+        }
+        .jbox{
+            /* border: 1px solid red; */
+            display: inline-block;
+            width: 75%;
+            text-align: right;
+            /* height: 40px; */
+            /* line-height: 70px; */
+            margin-top: 1%;
+            margin: 10px;
+        }
+        .tbox{
+            border-bottom: 1px solid #bcb7cc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #search_icon{
+            margin-right: 10px;
+            padding: 3px;
+            color: #bcb7cc;
+        }
+        .schbx{
+            border: 1px solid #bcb7cc;
+            display: inline-block;
+            margin: 10px;
+            text-align: right;
+        }
+        input:focus {
+            outline: none;
+        }
+        .txt{
+            border: 1px solid red;
         }
         .title-a{
             display: flex;
@@ -43,53 +76,55 @@
         /* *********** */
         /* section-2 */
         /* *********** */
-        .back-s2{
-            display: flex;
-            height: 100%;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 5%;
-        }
         .s2-img{
-            display: inline-flex;
-            width: 75%;
-            height: 87%;
-            justify-content: space-between;
+            /* border : 9px solid red; */
+            display: flex;
+            height: 1000px;
+            justify-content: center;
             align-items: center;
         }
-        .back-y{
+        .two{
             display: flex;
+            flex-wrap: wrap;
+            width: 1000px;
+            justify-content: space-around;
+            align-items: end;
+        }
+
+        .back-y{
             position: absolute;
-            width: 50%;
-            height: 60%;
+            width: 600px;
+            height: 750px;
             background-color: #f1c50e;
-            z-index: -99;
-            /* margin-top: 80px; */
+            z-index: 1;
+            margin: 61px auto 0;
             
         }
+        .cake{
+            width: 450px;
+            height: 600px;
+            background-position: 50% 50%;
+            z-index: 2;
+            background-size: cover;
+            background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/e07fd7349a87546e950fb324/photo1564305564045c62d40dd0123.jpg") ; 
+
+        }
         .sen{
+            z-index: 3;
             border: 7px solid black;
             background-color: white;
-            width: 30%;
+            width: 250px;
             height: 250px;
             padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
-        .cake{
-            /* display: flex; */
-            width: 38%;
-            height: 548px;
-        } 
         .li1, .li1-1{
-            /* text-align: center; */
+            text-align: center;
             /* border:1px solid darkblue; */
             text-align: left;
             padding-left: 3%;
         }
         .li1{
-            font-size: 2.25rem;
+            font-size: 2rem;
             font-style: bold;
             box-sizing: border-box;
             /* border: 1px solid red; */
@@ -97,6 +132,9 @@
         .li1-1{
             font-size: normal;
         }
+
+
+
         
         .s3{
             height: 600px;
@@ -106,14 +144,15 @@
         .s3-bgr{
             /* border: 1px solid red; */
             width: 100%; 
-            height: 100%;
+            height: 60%;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            flex-direction: wrap;
         }
         .salad, .li2, .li3, .fish{
-            width: 20%;
-            height: 55%;
+            width: 230px;
+            height: 100%;
         }
         .salad{
             /* border: 1px solid red; */
@@ -130,13 +169,14 @@
             /* padding : 10%; */
         }
         .li2-1, .li3-1{
-            font-size: 20px;
+            font-size: 1.5rem;
             font-weight: bold;
             padding: 3% 5%;
         }
         .li2-2, .li3-2{
-            font-size: 15px;
+            font-size: 1rem;
             padding: 0 5%;
+            
         }
     
 
@@ -215,7 +255,7 @@
             justify-items: center;
         }
         .s6-bgr{
-            width: 60%;
+            width: 90%;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -230,7 +270,7 @@
         .read{
             background-color: black;
             color: white;
-            width: 20%;
+            width: 100px;
             line-height: 35px;
             display: inline-block;
         }
@@ -239,12 +279,17 @@
 
 
 
-
-
+        .s7{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 750px;
+        }
         .s7-bgr{
             /* border: 1px solid hotpink; */
-            height: 600px;
-            width: 100%;
+            height: 100%;
+            width: 1000px;
+            /* flex-wrap: wrap; */
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -253,7 +298,7 @@
         .full, .article, .done{
             /* border: 1px solid red; */
             width: 30%;
-            height: 90%;
+            height: 70%;
             background-size: cover;
         }
         .article{
@@ -265,6 +310,39 @@
         }
         .done{
             background-image: url("https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/fcee991985085d4093370a3d/pexelsphoto3756525.jpeg");
+        }
+        .h1{
+            font-size: 30px;
+            margin-top: 20%;
+            /* border: 1px solid red; */
+        }
+        .h2{
+            font-size: 20px;
+            
+        }
+        .h3{
+            height: 150px;
+            display: inline-block;
+            margin: 7px 0;
+        }
+        .h4{
+            height: 40px;
+            line-height: 40px;
+            display: block;
+        }
+
+
+
+        .ft{
+            /* border: 10px solid green; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            height: 400px;
+            background-color: #333333;
+            color: white;
+            text-align: center;
         }
         .s8-bgr{
             /* border: 1px solid violet; */
@@ -278,41 +356,45 @@
             display : flex;
             align-items: end;
             justify-content: center;
-
         }
         .s8-article{
-            /* border: 1px solid green; */
-            font-size: 50px;
-            height: 200px;
-            line-height: 250px;
-        }
-        .ft{
+            font-size: 2.5rem;
+            height: 300px;
+            /* border: 1px solid violet; */
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+        .facebook, .twitter, .instagram{
+            width: 30px;
+        }
+        .fbox{
+            height: 70px;
+            width: 170px;
             justify-content: space-around;
-            width: 100%;
-            height: 400px;
-            background-color: #333333;
-            color: white;
-            text-align: center;
-        }
-        .h1{
-            font-size: 30px;
-            margin-top: 20%;
-        }
-        .h2{
-            font-size: 20px;
-        }
-        .h3{
             /* border: 1px solid red; */
-            width: 60%;
-            display: inline-block;
+            display: flex;
+
         }
+
     </style>
 </head>
 
 <body>
     <section class="s1">
+        <div class="tbox">
+            <div class="schbx">
+                <input type="text" class="txt" style="background-color:transparent; border-width: 0; height: 30px; width: 130px;" placeholder="Search" >
+                <a href="#" id="search_icon">
+                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                </a>
+            </div>
+            <a href="#" class="jbox">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
         <div class="i1">
             <div class="title-a">
                 <div class="title-1">
@@ -327,15 +409,18 @@
 
     <section class="s2">
         <div class="back-s2">
-            <div class="back-y"></div>
             <div class="s2-img">
-                <div class="sen">
-                    <div class="li1"> Cafe Food Menu</div>
-                    <br>
-                    <br>
-                    <div class="li1-1">All of our food is prepared by our team of trained kitchen staff from the sealed glass kitchen where you can see your food being made, without risk of little paws getting involved.</div>
+                <div class="two">
+                    <div class="sen">
+                        <div class="li1"> Cafe Food Menu</div>
+                        <br>
+
+                        <div class="li1-1">All of our food is prepared by our team of trained kitchen staff from the sealed glass kitchen where you can see your food being made, without risk of little paws getting involved.</div>
+                    </div>
+                    <div class="cake"></div>
                 </div>
-                <img class="cake" src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/e07fd7349a87546e950fb324/photo1564305564045c62d40dd0123.jpg" alt="cake">
+                <div class="back-y"></div>
+                
             </div>
         </div>
     </section>
@@ -344,12 +429,12 @@
         <div class="s3-bgr">
             <div class="salad"></div>
                 <div class="li2">
-                <div class="li2-1">Have a healthy afternoon snack</div><br>
+                <div class="li2-1">Have a healthy afternoon snack</div>
                 <div class="li2-2">The majority of people in the working world are likely familiar with the mid-afternoon slump.</div>
             </div>
             <div class="fish"></div>
             <div class="li3">
-                <div class="li3-1">Include lots of fibre in your diet</div><br>
+                <div class="li3-1">Include lots of fibre in your diet</div>
                 <div class="li3-2">Fibre is known to help aid with digestion. However, that’s not its only benefit.</div>
             </div>
         </div>
@@ -378,7 +463,7 @@
             <div class="sen-6-2">
                 The world's most delicious food is not Massaman curry, as we suggested, but a meaty, spicy, gingery dish from west Sumatra. "There is no love sincerer than the love of food," George Bernard Shaw said. Judging by the number of amazing dishes out there, he was right.<br><br>
                 <div class="read">
-                    <a href="#" style="color: white;">READ MORE</a>
+                    <a href="#" style="color: white; text-decoration-line: none;">READ MORE</a>
                 </div>
             </div>
         </div>
@@ -389,8 +474,9 @@
             <div class="full"></div>
             <div class="article">
                 <div class="h1">Restaurant</div>
-                <div class="h2">ORGANIC FARM</div><br>
-                <div class="h3">We bring the season’s best mix of organic produce and hand-crafted farm products conveniently to your door by growing and partnering with local farms and artisans in your area.</div><br><br>
+                <img src="https://cdn-icons-png.flaticon.com/128/7350/7350737.png">
+                <div class="h2">ORGANIC FARM</div>
+                <div class="h3">We bring the season’s best mix of organic produce and hand-crafted farm products conveniently to your door by growing and partnering with local farms and artisans in your area.</div>
                 <div class="h4">– Loo Hudson</div>
             </div>
             <div class="done"></div>
@@ -399,7 +485,16 @@
 
     <section class="s8">
         <div class="s8-bgr">
-            <div class="s8-article">Enjoy Morning Time</div>
+            <div class="ccbox">
+                <div class="s8-article">
+                    <div class="fbox">
+                        <a href="#"><img class="facebook" src="https://cdn-icons-png.flaticon.com/512/59/59439.png"></a>
+                        <a href="#"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/81/81609.png"></a>
+                        <a href="#"><img class="instagram" src="https://cdn-icons-png.flaticon.com/128/747/747393.png"></a>
+                    </div>
+                    Enjoy Morning Time
+                </div>
+            </div>
         </div>
     </section>
 

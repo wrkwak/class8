@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lotto = []
+        let ddyn = ''
+
+        lotto.push(7)
+        lotto.push(3)
+        lotto.push(5)
+        lotto.push(8)
+
+        let value = 58
+        
+        for(let i=0; i< lotto.length; i++){
+            if(lotto[i] == value){       
+                ddyn += '중복발생'+' : '+lotto[i]
+                break
+            } 
+        }
+        if(ddyn == ''){
+            ddyn += '중복없음'
+        }
+        console.log(ddyn)
+
+    </script>
+</body>
+</html>
